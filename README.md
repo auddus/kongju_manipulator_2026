@@ -6,6 +6,7 @@
 
 ---
 
+- 교재 123p ~ 200p 
 - wsl 을 설치 (Ubuntu 24.04) 
 - github 아이디를 만들고 repository를 생성 
 - git clone 을 해서 wsl 에 복사 
