@@ -11,3 +11,5 @@
 - git clone 을 해서 wsl 에 복사 
 - Vscode 설치 해서 remote wsl 로 접속 
 - github 계정 연동 
+
+-안녕
