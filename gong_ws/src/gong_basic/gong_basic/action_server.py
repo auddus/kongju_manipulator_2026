@@ -33,7 +33,7 @@ class Action_server(Node):
         goal_handle.succeed()
         self.get_logger().info(f"{goal_handle.status}")
         result = Fibonacci.Result()
-        result.seq = feedback_msg.temp_seq
+        result.seq = feedback_msg.temp_seqs
         return result
 
 
