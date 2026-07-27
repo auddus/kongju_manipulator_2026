@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+from tf2_basic.move_manipulator import main
+if __name__ == '__main__':
+    main()

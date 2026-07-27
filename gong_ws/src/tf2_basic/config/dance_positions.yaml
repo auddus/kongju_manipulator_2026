@@ -1,0 +1,22 @@
+joint_names:
+  - "joint1"
+  - "joint2"
+  - "joint3"
+  - "joint4"
+
+poses:
+  pose_wave_left:
+    positions: [0.89, -0.58, -0.26, -0.62]
+    gripper: 0.019
+  pose_wave_right:
+    positions: [-0.89, -0.28, 0.46, 0.32]
+    gripper: -0.01
+  pose_bow:
+    positions: [0.0, -1.2, 0.8, -0.4]
+    gripper: 0.01
+  pose_reach_up:
+    positions: [0.47, -0.88, 0.39, 0.89]
+    gripper: 0.02
+  pose_center:
+    positions: [0.0, 0.0, 0.0, 0.0]
+    gripper: 0.0
