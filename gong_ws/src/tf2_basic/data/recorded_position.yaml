@@ -1,0 +1,91 @@
+joint_names:
+- joint1
+- joint2
+- joint3
+- joint4
+joint_limits:
+  joint1:
+  - -3.14159265359
+  - 3.14159265359
+  joint2:
+  - -1.5
+  - 1.5
+  joint3:
+  - -1.5
+  - 1.4
+  joint4:
+  - -1.7
+  - 1.97
+gripper_limits:
+- -0.011
+- 0.02
+randomization:
+  variation_ratio: 0.0
+  minimum_joint_jitter: 0.01
+  minimum_gripper_jitter: 0.0002
+  shuffle_patterns: false
+  shuffle_steps: false
+execution:
+  repeat_count: 1
+  default_duration: 1.0
+  default_pause: 0.15
+  gripper_max_effort: 5.0
+patterns:
+- name: taught_motion
+  steps:
+  - positions:
+    - 0.610524
+    - -0.208621
+    - 0.130388
+    - 0.875903
+    gripper: 0.017873
+    duration: 1.0
+    pause: 0.15
+  - positions:
+    - 0.676486
+    - -0.325204
+    - -0.523087
+    - 0.872835
+    gripper: 0.017873
+    duration: 1.0
+    pause: 0.15
+  - positions:
+    - 0.638136
+    - -0.671884
+    - -0.860563
+    - 0.493942
+    gripper: 0.017856
+    duration: 1.0
+    pause: 0.15
+  - positions:
+    - 1.552389
+    - -0.581379
+    - 0.061359
+    - 0.661146
+    gripper: 0.017856
+    duration: 1.0
+    pause: 0.15
+  - positions:
+    - 1.474156
+    - -0.619728
+    - 0.831418
+    - 0.326738
+    gripper: 0.017873
+    duration: 1.0
+    pause: 0.15
+  - positions:
+    - -1.395923
+    - -0.972544
+    - 0.125786
+    - 0.633534
+    gripper: 0.017856
+    duration: 1.0
+    pause: 0.15
+  - positions:
+    - -1.021631
+    - -0.516952
+    - 0.533825
+    - 0.558369
+    gripper: 0.017873
+    duration: 1.0
+    pause: 0.15
