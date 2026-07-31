@@ -5,6 +5,27 @@ from setuptools import find_packages, setup
 
 package_name = "tf2_basic"
 
+
+def package_files(directory):
+    data_files = []
+
+    for path, directories, filenames in os.walk(directory):
+        files = [os.path.join(path, filename) for filename in filenames]
+
+        if not files:
+            continue
+
+        install_path = os.path.join(
+            "share",
+            package_name,
+            path,
+        )
+
+        data_files.append((install_path, files))
+
+    return data_files
+
+
 setup(
     name=package_name,
     version="0.0.0",
@@ -17,11 +38,14 @@ setup(
         ("share/" + package_name + "/rviz", glob(os.path.join("rviz", "*.*"))),
         ("share/" + package_name + "/meshes", glob(os.path.join("meshes", "*.*"))),
         ("share/" + package_name + "/data", glob(os.path.join("data", "*.yaml"))),
-    ],
+        ("share/" + package_name + "/models", glob(os.path.join("models", "*.*"))),
+        ("share/" + package_name + "/world", glob(os.path.join("world", "*.*"))),
+    ]
+    + package_files("models"),
     install_requires=["setuptools"],
     zip_safe=True,
-    maintainer="choisugil",
-    maintainer_email="freshmea@naver.com",
+    maintainer="myung",
+    maintainer_email="coolhk03@gmail.com",
     description="tf2 basic code for tutorial",
     license="Apache 2.0",
     extras_require={
@@ -29,7 +53,7 @@ setup(
             "pytest",
         ],
     },
-    entry_points={
+     entry_points={
         "console_scripts": [
             "static_turtle_tf2_broadcaster = tf2_basic.static_turtle_tf2_broadcaster:main",
             "dynamic_turtle_tf2_broadcaster = tf2_basic.dynamic_turtle_tf2_broadcaster:main",
